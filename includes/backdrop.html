@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+     scroll-behavior: smooth;
+  }
+  .back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  background: #37376b;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 100;
+  text-align: center;
+  display: none;
+  transition: 0.4s;
+  scroll-behavior: smooth;
+}
+
+.back-to-top:hover {
+  background: #2f2f53;;
+  transform: scale(1.2);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 22px;
+  z-index: 100;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  background: #128c7e;
+  transform: scale(1.15);
+}
+
+</style>
+<body>
+    <!-- Back to Top Button -->
+<a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+<!-- Floating WhatsApp Icon -->
+<a href="https://wa.me/923153601759" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  // Show back to top button on scroll
+  window.onscroll = function() {
+    var backToTop = document.querySelector(".back-to-top");
+    if (document.documentElement.scrollTop > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Smooth scroll to top
+  document.querySelector('.back-to-top').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default jump
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+
+</body>
+</html>
